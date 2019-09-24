@@ -5,6 +5,9 @@
 	<title>E-Compositor</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link rel="stylesheet" href="RichText-master/src/richtext.min.css">
+
 	<!--===============================================================================================-->
 	<link rel="icon" type="image/png" href="images/icons/favicon.ico" />
 	<!--===============================================================================================-->
@@ -33,9 +36,21 @@
 
 <body>
 	<div class="container-contact100">
-		
 		<div class="wrap-contact100">
 			<form class="contact100-form validate-form">
+
+				<span>
+					<button class="btn btn-danger">
+						Menu Inicial
+					</button>
+				</span>
+
+				<span>
+					<button class="btn btn-primary">
+						Menu Multiplo
+					</button>
+				</span>
+
 				<span class="contact100-form-title">
 					E-Compositor
 				</span>
@@ -95,21 +110,15 @@
 					</div>
 				</div>
 
-				<!-- <div class="wrap-input100 validate-input bg0 rs1-alert-validate"
-					data-validate="Please Type Your Message">
-					<span class="label-input100">Message</span>
-					<textarea class="input100" name="message" placeholder="Your message here..."></textarea>
-				</div> -->
+				<div class="wrap-input100 validate-input bg0 rs1-alert-validate">
 
-				<div class="wrap-input100 validate-input bg0 rs1-alert-validate"
-					data-validate="Please Type Your Message">
-					<span class="label-input100">Message</span>
-					<textarea class="input100" name="message" placeholder="Your message here..."></textarea>
+					<textarea class="content" name="example"></textarea>
+
 				</div>
 
-				<div class="form-group">                    
+				<div class="form-group">
 					<input type="file" multiple="multiple" class="form-control-file" id="anexos[]" placeholder="anexos">
-                </div>
+				</div>
 
 				<div class="container-contact100-form-btn">
 					<button class="contact100-form-btn">
@@ -198,6 +207,12 @@
 		gtag('config', 'UA-23581568-13');
 	</script>
 
+	<script src ="RichText-master/src/jquery.richtext.js"></script>
+	<script>
+		$(document).ready(function () {
+			$('.content').richText();
+		});
+	</script>
 </body>
 
 </html>
